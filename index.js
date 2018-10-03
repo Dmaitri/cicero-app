@@ -1,12 +1,14 @@
 var http = require('http');
 
-var server = http.createServer(function(request, response) {
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
-
-});
-
+app.listen(port, function(err) {
+    if (err) {
+      console.log(err);
+    } else {
+      open(`http://localhost:${port}`);
+    }
+  });
+  
 var port = process.env.PORT || 1337;
 server.listen(port);
 
